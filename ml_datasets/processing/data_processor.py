@@ -41,8 +41,8 @@ class DataProcessor:
 
 class ARFFReader():
 
-    def __init__(self):
-        pass
+    def __init__(self, pre_process = True):
+        self.pre_process = pre_process
 
     def _removeUnneccessaryTags(self,filename):
         """
@@ -64,11 +64,38 @@ class ARFFReader():
             data, meta = arff.loadarff(filename)
 
         df = DataFrame(data=data, columns=meta.names())
-        uniq = np.unique(df[meta.names()[-1]].values)
 
-        y = df[meta.names()[-1]].map({uniq[0]: 0, uniq[1]: 1})
+        if self.pre_process:
+            self._pre_process(df, meta)
+
+        print(df.columns)
+        y = df[meta.names()[-1]]
         X = df.drop([meta.names()[-1]], axis=1)
         return (X.values, y.values)
+
+
+    def _pre_process(self, df, meta):
+        """
+        Converts discrete feature into psuedo-continous versios.
+        One hot encodes features that take on multiple discrete values.
+        :param df:
+        :param meta:
+        :return:
+        """
+        for name, type in zip(meta.names(), meta.types()):
+            if type == 'nominal':
+                _, values = meta[name]
+
+                if len(values) == 2:
+                    uniq = np.unique(values)
+                    df[name] = df[name].map({uniq[0].encode(): 0, uniq[1].encode(): 1})
+                else:
+                    # one-hot-encodes discrete feature values into multiple features
+                    for value in values:
+                        df[name+"_"+value] = [1 if x == value.encode() else 0 for x in df[name]]
+                    df.drop(name, axis=1, inplace=True)
+
+
 
 
     def read(self, resource_path):

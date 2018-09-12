@@ -32,6 +32,8 @@ class TestDataLoader(TestCase):
                 X_train, y_train = train
                 X_test, y_test = test
 
+                print(X_train)
+
         pass
 
 
