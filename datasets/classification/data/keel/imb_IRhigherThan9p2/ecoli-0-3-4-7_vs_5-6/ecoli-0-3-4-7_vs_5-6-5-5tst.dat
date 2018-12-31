@@ -7,8 +7,8 @@
 @attribute a6 real [2.0, 92.0]
 @attribute a7 real [0.0, 88.0]
 @attribute class {positive, negative}
-@inputs a1, a2, a3, a4, a5, a6, a7
-@outputs class
+
+
 @data
 7.0, 4.0, 48.0, 5.0, 54.0, 35.0, 44.0, negative
 23.0, 32.0, 48.0, 5.0, 55.0, 25.0, 35.0, negative

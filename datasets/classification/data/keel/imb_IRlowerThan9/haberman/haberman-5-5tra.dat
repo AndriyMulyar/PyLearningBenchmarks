@@ -3,8 +3,8 @@
 @attribute Year integer [58, 69]
 @attribute Positive integer [0, 52]
 @attribute Class {positive, negative}
-@inputs Age, Year, Positive
-@outputs Class
+
+
 @data
 38.0, 59.0, 2.0, negative
 39.0, 63.0, 4.0, negative

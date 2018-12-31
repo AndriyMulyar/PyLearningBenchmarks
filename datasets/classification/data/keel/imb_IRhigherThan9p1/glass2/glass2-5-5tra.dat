@@ -9,8 +9,8 @@
 @attribute Ba real [0.0, 3.15]
 @attribute Fe real [0.0, 0.51]
 @attribute Class {positive, negative}
-@inputs RI, Na, Mg, Al, Si, K, Ca, Ba, Fe
-@outputs Class
+
+
 @data
 1.51673, 13.3, 3.64, 1.53, 72.53, 0.65, 8.03, 0.0, 0.29, negative
 1.5175, 12.82, 3.55, 1.49, 72.75, 0.54, 8.52, 0.0, 0.19, negative

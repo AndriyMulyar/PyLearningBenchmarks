@@ -18,8 +18,8 @@
 @attribute Exclusion_of_no {no,yes}
 @attribute No_of_nodes_in integer [1,8]
 @attribute Class {positive, negative}
-@inputs Lymphatics, Block_of_affere, Bl_of_lymph_c, Bl_of_lymph_s, By_pass, Extravasates, Regeneration_of, Early_uptake_in, Lym_nodes_dimin, Lym_nodes_enlar, Changes_in_lym, Defect_in_node, Changes_in_node, Changes_in_stru, Special_forms, Dislocation_of, Exclusion_of_no, No_of_nodes_in
-@output Class
+
+
 @data
 deformed,yes,no,no,no,yes,no,yes,1,2,oval,lacunar,lac_central,faint,vesicles,no,yes,3,negative
 displaced,yes,no,no,no,no,no,yes,1,2,oval,lacunar,lac_central,faint,no,no,yes,2,negative

@@ -4,8 +4,8 @@
 @attribute PetalLength real [1.0, 6.9]
 @attribute PetalWidth real [0.1, 2.5]
 @attribute Class {positive, negative}
-@inputs SepalLength, SepalWidth, PetalLength, PetalWidth
-@outputs Class
+
+
 @data
 5.0, 3.6, 1.4, 0.2, positive
 4.8, 3.4, 1.6, 0.2, positive

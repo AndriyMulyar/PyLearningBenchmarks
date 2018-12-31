@@ -6,8 +6,8 @@
 @attribute Black_king_col {a, b, c, d, e, f, g, h}
 @attribute Black_king_row {1, 2, 3, 4, 5, 6, 7, 8}
 @attribute Class {positive, negative}
-@inputs White_king_col, White_king_row, White_rook_col, White_rook_row, Black_king_col, Black_king_row
-@outputs Class
+
+
 @data
 c, 1, a, 5, a, 1, positive
 c, 1, a, 6, a, 1, positive

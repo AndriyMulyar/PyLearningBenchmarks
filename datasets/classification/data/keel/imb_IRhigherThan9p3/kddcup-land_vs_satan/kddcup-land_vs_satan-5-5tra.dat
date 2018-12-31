@@ -41,8 +41,8 @@
 @attribute Atr-39 real [0.0, 1.0]
 @attribute Atr-40 real [0.0, 1.0]
 @attribute Class {positive, negative}
-@inputs Atr-0, Atr-1, Atr-2, Atr-3, Atr-4, Atr-5, Atr-6, Atr-7, Atr-8, Atr-9, Atr-10, Atr-11, Atr-12, Atr-13, Atr-14, Atr-15, Atr-16, Atr-17, Atr-18, Atr-19, Atr-20, Atr-21, Atr-22, Atr-23, Atr-24, Atr-25, Atr-26, Atr-27, Atr-28, Atr-29, Atr-30, Atr-31, Atr-32, Atr-33, Atr-34, Atr-35, Atr-36, Atr-37, Atr-38, Atr-39, Atr-40
-@outputs Class
+
+
 @data
 0.0, tcp, finger, S0, 0.0, 0.0, 1, 0, 0, 0.0, 0, 0, 0.0, 0, 0, 0.0, 0.0, 0, 0, 0, 0, 0, 1.0, 2.0, 1.0, 1.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, positive
 0.0, tcp, finger, S0, 0.0, 0.0, 1, 0, 0, 0.0, 0, 0, 0.0, 0, 0, 0.0, 0.0, 0, 0, 0, 0, 0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 6.0, 1.0, 0.0, 1.0, 0.33, 1.0, 0.17, 0.0, 0.0, positive

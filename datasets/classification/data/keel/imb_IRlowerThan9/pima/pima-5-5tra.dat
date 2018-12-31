@@ -8,8 +8,8 @@
 @attribute Pedi real [0.078, 2.42]
 @attribute Age real [21.0, 81.0]
 @attribute Class {positive,negative}
-@inputs Preg, Plas, Pres, Skin, Insu, Mass, Pedi, Age
-@outputs Class
+
+
 @data
 4.0, 146.0, 78.0, 0.0, 0.0, 38.5, 0.52, 67.0, positive
 15.0, 136.0, 70.0, 32.0, 110.0, 37.1, 0.153, 43.0, positive

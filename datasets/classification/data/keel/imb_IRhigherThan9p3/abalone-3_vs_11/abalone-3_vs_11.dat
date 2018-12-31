@@ -8,8 +8,8 @@
 @attribute Viscera_weight real [5.0E-4, 0.76]
 @attribute Shell_weight real [0.0015, 1.005]
 @attribute Class {positive, negative}
-@inputs Sex, Length, Diameter, Height, Whole_weight, Shucked_weight, Viscera_weight, Shell_weight
-@outputs Class
+
+
 @data
 I, 0.13, 0.1, 0.03, 0.013, 0.0045, 0.0030, 0.0040, positive
 I, 0.11, 0.09, 0.03, 0.0080, 0.0025, 0.0020, 0.0030, positive

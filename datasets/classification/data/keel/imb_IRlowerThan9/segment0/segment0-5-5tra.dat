@@ -19,8 +19,8 @@
 @attribute Saturatoin-mean real [0.0, 1.0]
 @attribute Hue-mean real [-3.0441751, 2.9124804]
 @attribute Class {positive,negative}
-@inputs Region-centroid-col, Region-centroid-row, Region-pixel-count, Short-line-density-5, Short-line-density-2, Vedge-mean, Vegde-sd, Hedge-mean, Hedge-sd, Intensity-mean, Rawred-mean, Rawblue-mean, Rawgreen-mean, Exred-mean, Exblue-mean, Exgreen-mean, Value-mean, Saturatoin-mean, Hue-mean
-@outputs Class
+
+
 @data
 113.0, 130.0, 9.0, 0.0, 0.0, 0.27777776, 0.25092423, 0.33333328, 0.3651483, 0.8888889, 0.0, 2.5555556, 0.11111111, -2.6666667, 5.0, -2.3333333, 2.5555556, 1.0, -2.123254, negative
 202.0, 41.0, 9.0, 0.0, 0.0, 0.9444478, 0.7722018, 1.111112, 1.0255967, 123.03704, 111.888885, 139.77779, 117.44444, -33.444443, 50.22222, -16.777779, 139.77779, 0.19934683, -2.2999177, negative

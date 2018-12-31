@@ -6,9 +6,9 @@ from .processing.data_processor import DataProcessor
 from pprint import pprint
 class DataLoader:
 
-    def __init__(self, return_folds=True, filters=[]):
+    def __init__(self, return_folds=True, filters=[], pre_process=True):
         self.classification = ClassificationLoader(filters=filters)
-        self.process = DataProcessor()
+        self.process = DataProcessor(pre_process)
         self.return_folds = return_folds
 
 
@@ -33,6 +33,8 @@ class DataLoader:
             self.reset_filters(filters=filters)
 
         dataset_metadata = self.classification.load_meta()
+
+        dataset_metadata = sorted(dataset_metadata, key=lambda k: k['IR'])
         for metadata in dataset_metadata:
             yield (metadata, process(metadata, return_folds=self.return_folds))
 

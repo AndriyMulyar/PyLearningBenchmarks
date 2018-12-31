@@ -10,8 +10,8 @@
 @attribute Blackand integer [7, 46133]
 @attribute Wb_trans integer [1, 3212]
 @attribute Class {positive,negative}
-@inputs Height, Lenght, Area, Eccen, P_black, P_and, Mean_tr, Blackpix, Blackand, Wb_trans
-@output Class
+
+
 @data
 3, 113, 339, 37.667, 0.41, 0.472, 13.9, 139, 160, 10, negative
 2, 20, 40, 10.0, 0.675, 0.675, 27.0, 27, 27, 1, negative

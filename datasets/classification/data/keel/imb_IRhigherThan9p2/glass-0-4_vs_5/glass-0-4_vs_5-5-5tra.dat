@@ -9,8 +9,8 @@
 @attribute Ba real [0.0, 2.1987]
 @attribute Fe real [0.0, 0.459]
 @attribute typeGlass {positive, negative}
-@inputs RI, Na, Mg, Al, Si, K, Ca, Ba, Fe
-@outputs typeGlass
+
+
 @data
 1.51588824, 12.87795, 3.43036, 1.40066, 73.282, 0.68931, 8.04468, 0.0, 0.1224, negative
 1.5176423, 12.9777, 3.53812, 1.21127, 73.002, 0.65205, 8.52888, 0.0, 0.0, negative

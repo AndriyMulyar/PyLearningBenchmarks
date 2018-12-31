@@ -1,6 +1,6 @@
 from unittest import TestCase
 from ml_datasets import DataLoader
-
+from pprint import pprint
 class TestDataLoader(TestCase):
 
     @classmethod
@@ -18,23 +18,32 @@ class TestDataLoader(TestCase):
     def test_keel(self):
         data = self.data
         query = data(filters=[('dataset_provider', '=', 'keel')])
-        self.assertEquals(sum(1 for _ in query), 100,
+        self.assertEqual(sum(1 for _ in query), 100,
                           msg="Currently 100 datasets from KEEL, update test if this has changed")
 
     def test_dataset_retrieval(self):
         data = self.data
         query = data(filters=[('dataset_provider', '=', 'keel')])
 
-
-
         for metadata, folds in query:
+            pprint(metadata)
+            print()
             for train, test in folds:
                 X_train, y_train = train
                 X_test, y_test = test
 
-                print(X_train)
-
         pass
+    #
+    # def test_dataset_retrieval(self):
+    #     data = self.data
+    #     query = data(filters=[('dataset_provider', '=', 'keel')], return_folds=False)
+    #
+    #
+    #
+    #     for metadata, data in query:
+    #         pprint(metadata)
+    #
+    #     pass
 
 
 

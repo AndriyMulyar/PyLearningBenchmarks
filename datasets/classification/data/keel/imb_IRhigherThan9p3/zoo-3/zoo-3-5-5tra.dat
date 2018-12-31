@@ -16,8 +16,8 @@
 @attribute Domestic {0, 1}
 @attribute Catsize {0, 1}
 @attribute Class {positive, negative}
-@inputs Hair, Feathers, Eggs, Milk, Airborne, Aquatic, Predator, Toothed, Backbone, Breathes, Venomous, Fins, Legs, Tail, Domestic, Catsize
-@outputs Class
+
+
 @data
 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 2, 1, 0, 1, negative
 1, 0, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 4, 1, 0, 0, negative

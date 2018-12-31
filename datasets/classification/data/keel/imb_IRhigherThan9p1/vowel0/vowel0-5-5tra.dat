@@ -13,8 +13,8 @@
 @attribute F8 real [-1.613, 1.309]
 @attribute F9 real [-1.68, 1.396]
 @attribute Class {positive, negative}
-@inputs TT, SpeakerNumber, Sex, F0, F1, F2, F3, F4, F5, F6, F7, F8, F9
-@outputs Class
+
+
 @data
 0, 0, 0, -3.639, 0.418, -0.67, 1.779, -0.168, 1.627, -0.388, 0.529, -0.874, -0.814, positive
 0, 0, 0, -3.327, 0.496, -0.694, 1.365, -0.265, 1.933, -0.363, 0.51, -0.621, -0.488, negative

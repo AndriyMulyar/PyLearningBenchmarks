@@ -5,8 +5,8 @@
 @attribute Thyroidstimulating real [0.1, 56.4]
 @attribute TSH_value real [-0.7, 56.3]
 @attribute Class {positive, negative}
-@inputs T3resin, Thyroxin, Triiodothyronine, Thyroidstimulating, TSH_value
-@outputs Class
+
+
 @data
 113, 9.9, 3.1, 2.0, 5.9, negative
 127, 12.9, 2.4, 1.4, 0.6, negative

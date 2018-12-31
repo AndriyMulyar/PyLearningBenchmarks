@@ -10,8 +10,8 @@ A class to process a given dataset
 
 class DataProcessor:
 
-    def __init__(self):
-        self.arff_reader = ARFFReader()
+    def __init__(self, pre_process):
+        self.arff_reader = ARFFReader(pre_process)
 
 
 
@@ -29,7 +29,7 @@ class DataProcessor:
         resource_path = dataset_metadata['directory']
 
         if return_folds:
-            for i in range(1,5):
+            for i in range(1,6):
                 train_file = dataset_metadata['name']+"-5-%itra.dat" %i
                 test_file = dataset_metadata['name'] + "-5-%itst.dat" %i
 
@@ -41,7 +41,7 @@ class DataProcessor:
 
 class ARFFReader():
 
-    def __init__(self, pre_process = True):
+    def __init__(self, pre_process):
         self.pre_process = pre_process
 
     def _removeUnneccessaryTags(self,filename):
@@ -65,13 +65,22 @@ class ARFFReader():
 
         df = DataFrame(data=data, columns=meta.names())
 
+        for feature, type in zip(df.columns, meta.types()):
+            if type == 'nominal' and feature.lower() != 'class' and feature.lower() != "typeglass" and feature.lower() != "number":
+                #df[feature] = df[feature].str.decode('utf-8')
+                #df[feature] = df[feature].astype('category')
+                pass
+
         if self.pre_process:
             self._pre_process(df, meta)
-
-        print(df.columns)
         y = df[meta.names()[-1]]
+        #print(y)
+        #print(y)
+        # y = y.str.decode("utf-8")
+        # y = y.astype('category')
         X = df.drop([meta.names()[-1]], axis=1)
-        return (X.values, y.values)
+        #print(df)
+        return (X, y)
 
 
     def _pre_process(self, df, meta):
@@ -86,15 +95,19 @@ class ARFFReader():
             if type == 'nominal':
                 _, values = meta[name]
 
-                if len(values) == 2:
+
+                if name.lower() == 'class' or name.lower() == "typeglass" or name.lower() == "number": #we don't want to one-hot class labels
+                    uniq = np.unique(values)
+                    df[name] = df[name].map({uniq[i].encode(): i for i, k in enumerate(uniq)})
+                elif len(values) == 2:
                     uniq = np.unique(values)
                     df[name] = df[name].map({uniq[0].encode(): 0, uniq[1].encode(): 1})
                 else:
                     # one-hot-encodes discrete feature values into multiple features
                     for value in values:
                         df[name+"_"+value] = [1 if x == value.encode() else 0 for x in df[name]]
+                        #df[name + "_" + value] = df[name + "_" + value].astype('bool')
                     df.drop(name, axis=1, inplace=True)
-
 
 
 

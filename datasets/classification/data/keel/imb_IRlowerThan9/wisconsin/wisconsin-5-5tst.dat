@@ -9,8 +9,8 @@
 @attribute NormalNucleoli integer [1, 10]
 @attribute Mitoses integer [1, 10]
 @attribute Class {positive,negative}
-@inputs ClumpThickness, CellSize, CellShape, MarginalAdhesion, EpithelialSize, BareNuclei, BlandChromatin, NormalNucleoli, Mitoses
-@outputs Class
+
+
 @data
 8, 7, 5, 10, 7, 9, 5, 5, 4, positive
 7, 3, 2, 10, 5, 10, 5, 4, 4, positive

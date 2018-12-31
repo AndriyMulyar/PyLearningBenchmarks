@@ -11,8 +11,8 @@
 @attribute Sulphates real [0.22, 1.08]
 @attribute Alcohol real [8.0, 14.2]
 @attribute Class {positive, negative}
-@inputs FixedAcidity, VolatileAcidity, CitricAcid, ResidualSugar, Chlorides, FreeSulfurDioxide, TotalSulfurDioxide, Density, PH, Sulphates, Alcohol
-@outputs Class
+
+
 @data
 5.5, 0.485, 0.0, 1.5, 0.065, 8.0, 103.0, 0.994, 3.63, 0.4, 9.7, negative
 6.4, 0.595, 0.14, 5.2, 0.058, 15.0, 97.0, 0.9951, 3.38, 0.36, 9.0, negative

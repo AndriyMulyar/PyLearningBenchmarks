@@ -34,8 +34,8 @@
 @attribute Band-like_infiltrate integer[0,3]
 @attribute Age integer[0,75]
 @attribute Class {positive, negative}
-@inputs Erythema, Scaling, Definite_borders, Itching, Koebner_phenomenon, Polygonal_papules, Follicular_papules, Oral_mucosal, Knee_and_elbow, Scalp_involvement, Family_history, Melanin_incontinence, Eosinophils, PNL_infiltrate, Fibrosis, Exocytosis, Acanthosis, Hyperkeratosis, Parakeratosis, Clubbing, Elongation, Thinning, Spongiform_pustule, Munro_microabcess, Focal_hypergranulosis, Granular_layer, Vacuolisation, Spongiosis, Saw-tooth_appearance, Follicular_horn_plug, Perifollicular_parakeratosis, Inflammatory_monoluclear, Band-like_infiltrate, Age
-@output Class
+
+
 @data
 2,2,0,3,0,0,0,0,1,0,0,0,0,0,0,3,2,0,0,0,0,0,0,0,0,0,0,3,0,0,0,1,0,55,negative
 3,3,3,2,1,0,0,0,1,1,1,0,0,1,0,1,2,0,2,2,2,2,2,1,0,0,0,0,0,0,0,1,0,8,negative

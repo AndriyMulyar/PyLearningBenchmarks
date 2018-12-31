@@ -13,8 +13,8 @@
 @attribute ca real [0.0, 3.0]
 @attribute thal real [3.0, 7.0]
 @attribute num {positive, negative}
-@inputs age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal
-@outputs num
+
+
 @data
 63.0,1.0,1.0,145.0,233.0,1.0,2.0,150.0,0.0,2.3,3.0,0.0,6.0,negative
 41.0,0.0,2.0,130.0,204.0,0.0,2.0,172.0,0.0,1.4,1.0,0.0,3.0,negative

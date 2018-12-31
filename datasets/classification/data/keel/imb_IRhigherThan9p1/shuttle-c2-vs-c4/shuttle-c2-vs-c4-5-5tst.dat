@@ -9,8 +9,8 @@
 @attribute A8 integer [-353, 130]
 @attribute A9 integer [-356, 126]
 @attribute Class {positive, negative}
-@input A1,A2,A3,A4,A5,A6,A7,A8,A9
-@output Class
+
+
 @data
 70, -30, 107, 0, 60, -13, 37, 47, 10, positive
 81, 0, 84, 0, -20, 24, 4, 105, 102, negative

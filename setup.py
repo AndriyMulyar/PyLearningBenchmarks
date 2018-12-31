@@ -1,18 +1,20 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 from ml_datasets import __version__, __authors__
+
+packages = find_packages()
 
 def readme():
     with open('README.md') as f:
         return f.read()
 
 setup(
-    name='ml_datasets',
+    name='py_learning_benchmarks',
     version=__version__,
     license='GNU GENERAL PUBLIC LICENSE',
-    description='A package allowing for the easy access and filterable retrieval of common machine learning benchmarks.',
+    description='A python package allowing for the easy access and filterable retrieval of common machine learning benchmarks.',
     long_description=readme(),
-    packages=['ml_datasets', 'datasets'],
-    url='https://github.com/AndriyMulyar/ml_datasets',
+    packages=packages,
+    url='https://github.com/AndriyMulyar/PyLearningBenchmarks',
     author=__authors__,
     author_email='contact@andriymulyar.com',
     keywords='machine-learning benchmark datasets',
@@ -20,8 +22,6 @@ setup(
         'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: GNU General Public License (GPL)',
         'Programming Language :: Python :: 3.5',
-        # 'Natural Language :: English'
-        # 'Topic :: Text Processing :: Linguistic',
         'Intended Audience :: Science/Research'
     ],
     install_requires=[

@@ -10,8 +10,8 @@
 @attribute S5 integer[1,4]
 @attribute C5 integer[1,13]
 @attribute Class {positive, negative}
-@inputs S1, C1, S2, C2, S3, C3, S4, C4, S5, C5
-@outputs Class
+
+
 @data
 4,5,1,9,3,5,4,9,2,9,negative
 4,11,4,5,2,11,3,11,1,5,negative

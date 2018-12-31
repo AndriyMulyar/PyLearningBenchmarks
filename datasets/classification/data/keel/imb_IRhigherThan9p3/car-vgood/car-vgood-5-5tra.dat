@@ -6,8 +6,8 @@
 @attribute Lug_boot {small, med, big}
 @attribute Safety {low, med, high}
 @attribute Class {positive, negative}
-@inputs Buying, Maint, Doors, Persons, Lug_boot, Safety
-@outputs Class
+
+
 @data
 vhigh, vhigh, 2, 2, small, low, negative
 vhigh, vhigh, 2, 2, med, low, negative
