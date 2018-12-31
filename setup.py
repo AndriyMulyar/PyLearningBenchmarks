@@ -25,6 +25,7 @@ setup(
         'Intended Audience :: Science/Research'
     ],
     install_requires=[
+        'scipy'
     ],
     test_suite='nose.collector',
     tests_require=['nose'],
