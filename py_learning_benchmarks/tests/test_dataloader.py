@@ -1,5 +1,5 @@
 from unittest import TestCase
-from ml_datasets import DataLoader
+from py_learning_benchmarks import DataLoader
 from pprint import pprint
 class TestDataLoader(TestCase):
 

@@ -26,17 +26,17 @@ class ClassificationLoader:
             for dataset_directory in pkg_resources.resource_listdir('datasets', 'classification/data/keel'+'/'+directory):
                 metadata_file = pkg_resources.resource_filename('datasets', 'classification/data/keel'+'/'+directory+'/'+dataset_directory+'/'+dataset_directory+'-names.txt')
                 dataset_metadata = {'name':dataset_directory, 'directory': 'classification/data/keel'+'/'+directory+'/'+dataset_directory}
-                file = open(metadata_file, 'r')
-                text = file.read()
-                matches = re.finditer(r"\d:\s([\w ]*)[.:\s]*([A-Za-z0-9.,]+(?:\s+[A-Za-z0-9.,]+)*\s*$)", text, re.MULTILINE)
-                for match in matches:
-                    dataset_metadata[match.group(1).strip()] = self._parse_float(match.group(2).strip().replace(',', '.'))
-                    if "Description" in dataset_metadata:
-                        dataset_metadata.pop('Description')
-                    if "Header" in dataset_metadata:
-                        dataset_metadata.pop('Header')
-                dataset_metadata["dataset_provider"] =  'keel'
-                self.datasets_metadata.append(dataset_metadata)
+                with open(metadata_file, 'r') as file:
+                    text = file.read()
+                    matches = re.finditer(r"\d:\s([\w ]*)[.:\s]*([A-Za-z0-9.,]+(?:\s+[A-Za-z0-9.,]+)*\s*$)", text, re.MULTILINE)
+                    for match in matches:
+                        dataset_metadata[match.group(1).strip()] = self._parse_float(match.group(2).strip().replace(',', '.'))
+                        # if "Description" in dataset_metadata:
+                        #     dataset_metadata.pop('Description')
+                        if "Header" in dataset_metadata:
+                            dataset_metadata.pop('Header')
+                    dataset_metadata["dataset_provider"] =  'keel'
+                    self.datasets_metadata.append(dataset_metadata)
 
     def _parse_float(self, value):
         try:
@@ -51,6 +51,7 @@ class ClassificationLoader:
                '>=': operator.ge,
                '<=': operator.le,
                '=': operator.eq,
+               'not contains': lambda a,b : not operator.contains(a,b),
                'contains': operator.contains}
         return [x for x in filter_this_dict if ops[operation](x[key], value)]
 

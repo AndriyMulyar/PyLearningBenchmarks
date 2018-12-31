@@ -1,5 +1,5 @@
 from setuptools import setup, find_packages
-from ml_datasets import __version__, __authors__
+from py_learning_benchmarks import __version__, __authors__
 
 packages = find_packages()
 
