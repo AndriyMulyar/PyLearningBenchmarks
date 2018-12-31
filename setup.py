@@ -1,5 +1,7 @@
 from setuptools import setup, find_packages
-from py_learning_benchmarks import __version__, __authors__
+
+__version__ = "0.0.1"
+__authors__ = "Andriy Mulyar"
 
 packages = find_packages()
 
@@ -25,7 +27,8 @@ setup(
         'Intended Audience :: Science/Research'
     ],
     install_requires=[
-        'scipy'
+        'numpy',
+	'pandas'
     ],
     test_suite='nose.collector',
     tests_require=['nose'],
