@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-__version__ = "0.0.1"
+__version__ = "1.0.0"
 __authors__ = "Andriy Mulyar"
 
 packages = find_packages()
@@ -28,7 +28,7 @@ setup(
     ],
     install_requires=[
         'numpy',
-	'pandas'
+        'pandas'
     ],
     test_suite='nose.collector',
     tests_require=['nose'],

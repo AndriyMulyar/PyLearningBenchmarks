@@ -112,7 +112,7 @@ class ARFFReader():
 
 
     def read(self, resource_path):
-        file = pkg_resources.resource_filename('datasets', resource_path)
+        file = pkg_resources.resource_filename('py_learning_benchmarks', resource_path)
         return self.load_ARFF(file)
 
 

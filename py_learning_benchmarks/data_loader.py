@@ -1,9 +1,10 @@
 """
 Loads datasets one at a time for experimentation purposes
 """
-from datasets import ClassificationLoader
+from .datasets import ClassificationLoader
 from .processing.data_processor import DataProcessor
-from pprint import pprint
+
+
 class DataLoader:
 
     def __init__(self, return_folds=True, filters=[], pre_process=True):

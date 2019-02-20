@@ -22,10 +22,10 @@ class ClassificationLoader:
         return filtered
 
     def _load_keel(self):
-        for directory in pkg_resources.resource_listdir('datasets', 'classification/data/keel'):
-            for dataset_directory in pkg_resources.resource_listdir('datasets', 'classification/data/keel'+'/'+directory):
-                metadata_file = pkg_resources.resource_filename('datasets', 'classification/data/keel'+'/'+directory+'/'+dataset_directory+'/'+dataset_directory+'-names.txt')
-                dataset_metadata = {'name':dataset_directory, 'directory': 'classification/data/keel'+'/'+directory+'/'+dataset_directory}
+        for directory in pkg_resources.resource_listdir('py_learning_benchmarks', 'datasets/classification/data/keel'):
+            for dataset_directory in pkg_resources.resource_listdir('py_learning_benchmarks', 'datasets/classification/data/keel'+'/'+directory):
+                metadata_file = pkg_resources.resource_filename('py_learning_benchmarks', 'datasets/classification/data/keel'+'/'+directory+'/'+dataset_directory+'/'+dataset_directory+'-names.txt')
+                dataset_metadata = {'name':dataset_directory, 'directory': 'datasets/classification/data/keel'+'/'+directory+'/'+dataset_directory}
                 with open(metadata_file, 'r') as file:
                     text = file.read()
                     matches = re.finditer(r"\d:\s([\w ]*)[.:\s]*([A-Za-z0-9.,]+(?:\s+[A-Za-z0-9.,]+)*\s*$)", text, re.MULTILINE)

@@ -1,2 +1,2 @@
 include README.rst
-include datasets/*
+include py_learning_benchmarks/datasets/*
