@@ -18,7 +18,7 @@ class DataLoader:
     def __exit__(self, exc_type, exc_val, exc_tb):
         pass
 
-    def __call__(self, filters=None):
+    def __call__(self, filters=None, sort_by="IR"):
         """
         Returns a generator of the specified collection of data-sets to load with metadata.
         Each dataset is a tuple containing a meta-data dict and a generator of each fold
@@ -34,7 +34,7 @@ class DataLoader:
 
         dataset_metadata = self.classification.load_meta()
 
-        dataset_metadata = sorted(dataset_metadata, key=lambda k: k['IR'])
+        dataset_metadata = sorted(dataset_metadata, key=lambda k: k[sort_by])
         for metadata in dataset_metadata:
             yield (metadata, process(metadata, return_folds=self.return_folds))
 
